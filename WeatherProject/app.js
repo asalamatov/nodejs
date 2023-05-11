@@ -88,10 +88,10 @@ app.post("/", (request, response)=> {
       const temp = weatherData.main.temp
       const weatherDesc = weatherData.weather[0]['description'];
       console.log(weatherDesc)
-      response.write("<h1>it is " + weatherDesc + " and the temp is " + temp +  ` in ${query}`);
+      response.write(`<head><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"></head><body><div class="container"><h1 class="text-center" style="margin-top: 35%">The weather is currently ` + weatherDesc + " and the temperature is " + temp +  `&#8457; in ${query}.`);
       const iconCode = weatherData.weather[0]['icon']
       const icon = `http://openweathermap.org/img/wn/${iconCode}@2x.png`
-      response.write(`<br><img src='${icon}'>`);
+      response.write(`<br><img style="width: 200px" src='${icon}'>`);
       response.send();
     })
   })
