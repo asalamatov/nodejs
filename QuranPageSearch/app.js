@@ -7,6 +7,7 @@ app.get("/", (req, res)=> {
     res.sendFile(__dirname + "/index.html")
 })
 
+
 app.post("/", (req, res)=> {
     pageNo = req.body.pageNumber;
     https.get(`https://kuran.kz/images/medine750/${pageNo}.jpg`, () => res.send(`<img style="width: 70%" src ="https://kuran.kz/images/medine750/${pageNo}.jpg" >`))
