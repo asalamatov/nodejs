@@ -10,7 +10,7 @@ app.get("/", (req, res)=> {
 
 app.post("/", (req, res)=> {
     pageNo = req.body.pageNumber;
-    https.get(`https://kuran.kz/images/medine750/${pageNo}.jpg`, () => res.send(`<img style="width: 70%" src ="https://kuran.kz/images/medine750/${pageNo}.jpg" >`))
+    https.get(`https://kuran.kz/images/medine750/${pageNo}.jpg`, () => res.send(` <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> <div class="bg-info"> <img class="rounded mx-auto my-auto m-1 d-block" style="width:800px" src ="https://kuran.kz/images/medine750/${pageNo}.jpg" ></div>`))
 
 });
 
