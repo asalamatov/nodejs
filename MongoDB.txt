@@ -34,3 +34,5 @@ db.products.insertOne({
     }
   ]
 })
+
+next, use Mongoose for easier operation with MongoDB
